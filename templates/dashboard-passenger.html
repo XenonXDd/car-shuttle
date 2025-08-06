@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje jízda</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="left-sidebar">
+            <div class="logo"></div>
+        </aside>
+        <div class="main-content-wrapper">
+            <header class="top-bar">
+                <div class="user-profile">
+                    <span>Anna Dvořáková</span>
+                    <div class="avatar"></div>
+                </div>
+            </header>
+            <main class="content-area">
+                <h1>Jsi cestující</h1>
+                
+                <div class="ride-info">
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Tvůj řidič je:</div>
+                        <div class="ride-info-value">Franta Bofek</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Řidič tě vyzvedne:</div>
+                        <div class="ride-info-value">v 17:56 na nádraží v Přelouči</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Řidičovo tel. číslo:</div>
+                        <div class="ride-info-value">+420 123 456 789</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Řidič preferuje zavazadla:</div>
+                        <div class="ride-info-value">mega velký kufr</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Řidič vyžaduje platbu:</div>
+                        <div class="ride-info-value">Kup mi pivo</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Popis vozidla:</div>
+                        <div class="ride-info-value">modré BMW</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Poznámka od řidiče:</div>
+                        <div class="ride-info-value">modré BMW</div>
+                    </div>
+                    <div class="ride-info-row">
+                        <div class="ride-info-label">Fotka vozidla:</div>
+                        <div class="ride-info-value">modré BMW</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

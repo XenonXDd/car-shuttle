@@ -1,0 +1,194 @@
+/* style.css */
+
+/* Základní nastavení a proměnné */
+:root {
+  --primary-blue: #01579b; /* Tmavě modrá z designu */
+  --background-color: #f4f7fa;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex; /* Klíčové pro layout s postranní lištou */
+  height: 100vh;
+}
+
+/* Hlavní layout aplikace */
+.app-layout {
+  display: flex;
+  width: 100%;
+}
+
+.left-sidebar {
+  width: 70px;
+  background-color: var(--primary-blue);
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  background-color: #fff; /* Placeholder pro logo */
+  border-radius: 5px;
+  /* Vložte sem vaše SVG nebo IMG logo */
+}
+
+.main-content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-bar {
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile span {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.user-profile .avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
+}
+
+.content-area {
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Styly pro formuláře a tlačítka */
+h1 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #004274;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Styly pro Landing Page (tlačítka pod sebou) */
+.landing-buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.landing-buttons a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary-blue);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.landing-buttons a:hover {
+  background-color: #004274;
+}
+
+.landing-buttons a.outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+.landing-buttons a.outline:hover {
+    background-color: #e7f1f9;
+}
+
+
+/* Styly pro dashboard cestujícího (přesně podle obrázku) */
+.ride-info-row {
+  display: flex;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+.ride-info-label {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  flex-shrink: 0;
+  width: 250px; /* Pevná šířka pro zarovnání */
+  text-align: left;
+  margin-right: 1.5rem;
+  font-weight: 500;
+}
+
+.ride-info-value {
+  font-weight: 500;
+}

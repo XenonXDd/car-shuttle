@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FastAPI Page</title>
-  <link rel="stylesheet" href="/static/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shuttle | Teambuilding</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
 <body>
-  <div class="header">
-    <a href="#">Sign In</a>
-    <a href="#">Sign Out</a>
-  </div>
-  <div class="container">
-    <div class="button-group">
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
+  <div class="app-layout">
+    <aside class="left-sidebar">
+      <img src="icon_color.svg" alt="Shuttle Logo" class="logo">
+    </aside>
+    <div class="main-content-wrapper">
+      <header class="top-bar">
+        </header>
+      <main class="content-area" style="text-align: center;">
+        <h1>Shuttle Teambuilding</h1>
+        <p style="margin-bottom: 3rem;">Aplikace pro organizaci dopravy</p>
+        <div class="landing-buttons">
+          <a href="register-passenger.html">Potřebuji odvoz</a>
+          <a href="register-driver.html">Nabízím odvoz</a>
+          <a href="login.html" class="outline">Přihlásit se</a>
+          <a href="admin.html" class="outline">Admin Panel</a>
+        </div>
+      </main>
     </div>
   </div>
 </body>

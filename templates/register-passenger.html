@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hledám odvoz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <a href="index.html">← Zpět na hlavní stránku</a>
+        <hgroup>
+            <h1>Hledám odvoz</h1>
+            <h2>Dejte nám vědět, odkud a kdy chcete jet</h2>
+        </hgroup>
+        <form>
+            <div class="grid">
+                <label for="name">
+                    Jméno a příjmení
+                    <input type="text" id="name" name="name" placeholder="Anna Dvořáková" required>
+                </label>
+                <label for="phone">
+                    Telefonní číslo
+                    <input type="tel" id="phone" name="phone" placeholder="+420 987 654 321" required>
+                </label>
+            </div>
+
+            <label for="arrival_place">
+                Místo, odkud potřebuji vyzvednout
+                <input type="text" id="arrival_place" name="arrival_place" placeholder="Brno, u Vaňkovky" required>
+            </label>
+
+            <label for="arrival_time">Kdy se potřebuji dostat na teambuilding?</label>
+            <fieldset>
+                <label><input type="radio" name="arrival_time" value="morning">Co nejdříve ráno</label>
+                <label><input type="radio" name="arrival_time" value="noon" checked>Kolem oběda</label>
+                <label><input type="radio" name="arrival_time" value="evening">Až večer</label>
+            </fieldset>
+
+            <label for="luggage">Kolik zavazadel mám?</label>
+            <select id="luggage" name="luggage" required>
+                <option value="small" selected>Jen malý batoh</option>
+                <option value="big">Mám velký kufr</option>
+            </select>
+
+            <label for="notes">Poznámka</label>
+            <textarea id="notes" name="notes" placeholder="Jsem časově flexibilní..."></textarea>
+
+            <button type="submit">Najít odvoz</button>
+        </form>
+    </main>
+</body>
+</html>

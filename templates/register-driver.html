@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrace řidiče</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="left-sidebar">
+      <img src="icon_color.svg" alt="Shuttle Logo" class="logo">
+    </aside>
+    <div class="main-content-wrapper">
+      <header class="top-bar">
+        <div class="user-profile">
+          <span>jméno uživatele</span>
+          <div class="avatar"></div>
+        </div>
+      </header>
+      <main class="content-area">
+        <h1>Registrace řidiče</h1>
+        <form>
+          <div class="grid">
+            <label>Jméno a příjmení
+              <input type="text" name="name" placeholder="Jan Novák" required>
+            </label>
+            <label>Telefonní číslo
+              <input type="tel" name="phone" placeholder="+420 123 456 789" required>
+            </label>
+          </div>
+          <div class="grid">
+            <label>Místo odjezdu
+              <input type="text" name="departure_place" placeholder="Praha, Hlavní nádraží" required>
+            </label>
+            <label>Datum a čas odjezdu
+              <input type="datetime-local" name="departure_time" required>
+            </label>
+          </div>
+          <div class="grid">
+            <label>Počet volných sedadel
+              <input type="number" name="seats" min="1" max="8" placeholder="3" required>
+            </label>
+            <label>Popis vozidla
+              <input type="text" name="car_description" placeholder="Modrá Škoda Octavia" required>
+            </label>
+          </div>
+          <div class="grid">
+              <label>Může si cestující vzít zavazadla?
+                  <select name="luggage" required>
+                    <option value="small">Pouze malý batoh</option>
+                    <option value="big" selected>Může i velký kufr</option>
+                  </select>
+              </label>
+              <label>Platba
+                  <select name="payment" required>
+                    <option value="free">Nechci peníze</option>
+                    <option value="beer">Kup mi pivo</option>
+                    <option value="cash">Hotovost</option>
+                    <option value="qr">Pošlu QR kód</option>
+                  </select>
+              </label>
+          </div>
+          <label>Poznámka
+            <textarea name="notes" placeholder="Můžu cestou nabrat někoho po cestě na D1..."></textarea>
+          </label>
+          <button type="submit">Zaregistrovat jízdu</button>
+        </form>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
