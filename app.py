@@ -1,10 +1,15 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import csv
 import os
 
 
 app = FastAPI()
+
+# Mount the static directory to serve CSS, JS, images etc.
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 PASSENGERS_CSV = "data/passengers.csv"
 DRIVERS_CSV = "data/drivers.csv"
@@ -39,6 +44,12 @@ def read_csv_by_id(file_path, record_id):
                 return row
     return None
 
+# Serve the index.html file from static folder at root "/"
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    with open("templates/index.html", "r", encoding="utf-8") as f:
+        html_content = f.read()
+    return HTMLResponse(content=html_content, status_code=200)
 
 @app.post("/register-passenger")
 def register_passenger(passenger: Passenger):
